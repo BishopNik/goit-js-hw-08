@@ -12,6 +12,7 @@ const feedbackFormState = {
 };
 
 dataFilling();
+console.log(feedbackFormState);
 
 ref.input.addEventListener('input', throttle(onChangeInput, 500));
 ref.textarea.addEventListener('input', throttle(onChangeInput, 500));
