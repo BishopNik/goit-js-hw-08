@@ -12,7 +12,6 @@ const feedbackFormState = {
 };
 
 dataFilling();
-console.log(feedbackFormState);
 
 ref.input.addEventListener('input', throttle(onChangeInput, 500));
 ref.textarea.addEventListener('input', throttle(onChangeInput, 500));
@@ -51,7 +50,7 @@ function readDataFormSaved() {
   const formState = localStorage.getItem(LOCALSTR_KEY);
 
   try {
-    feedbackFormStateParse = JSON.parse(formState);
+    const feedbackFormStateParse = JSON.parse(formState);
     feedbackFormState.email = feedbackFormStateParse.email;
     feedbackFormState.message = feedbackFormStateParse.message;
   } catch (error) {
